@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Linq;
 
 namespace Rualekseev.Interview.ArrayHelperTest
 {
@@ -26,6 +27,7 @@ namespace Rualekseev.Interview.ArrayHelperTest
         public void FindUnsortedLength_Correct(int[] array, int expectedResult)
         {
             Assert.AreEqual(expectedResult, ArrayHelper.ArrayHelper.FindUnsortedLength(array));
+            Assert.AreEqual(expectedResult, ArrayHelper.ArrayHelper.FindUnsortedLength(array.ToList()));
         }
     }
 }
